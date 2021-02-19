@@ -28,11 +28,19 @@ The tables are structured in a **star schema** optimized for queries in song pla
 
 ### ETL Process
 
-The **ETL Process** is performed with python scripts.
+The **ETL Process** is performed with python scripts. sql_queries.py contains all your sql queries, and is imported in `create_tables.py` and `etl.py`.
 
 ~~~bash
 
-# Creates database
+# Drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
 python create_tables.py
 
 ~~~~
+
+~~~~bash
+
+# Reads and processes files from song_data and log_data and loads them into your tables.
+python etl.py
+
+~~~~
+
