@@ -22,6 +22,17 @@ The database schema is structured like this:
     * artist_id, name, location, latitude, longitude
 - **time**: time - timestamps of records in songplays broken down into specific units
     * start_time, hour, day, week, month, year, weekday
+<br>
+
+The tables are structured in a **star schema** optimized for queries in song play analysis.<br>
 
 ### ETL Process
 
+The **ETL Process** is performed with python scripts.
+
+~~~bash
+
+# Creates database
+python create_tables.py
+
+~~~~
